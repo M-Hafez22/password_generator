@@ -1,4 +1,5 @@
 import string
+import random
 
 # Get Password length
 minimum_password_length = int(6)
@@ -39,5 +40,6 @@ else:
     characters = list(string.digits)
     print("Password will include Numbers only\n\0")
 
-# TODO shuffling the characters
+# shuffling the characters list
+random.shuffle(characters)
 # TODO Generate the password
