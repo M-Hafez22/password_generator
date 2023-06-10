@@ -1,3 +1,5 @@
+import string
+
 # Get Password length
 minimum_password_length = int(6)
 pw_lenght = input("Password Lenght?: ")
@@ -22,6 +24,20 @@ add_punctuation = input(
     "Do you want the password to include punctuation (y/n):")
 print("\n")
 
-# TODO Create Characters list
+# Create Characters list
+if add_characters == 'y' and add_punctuation == 'y':
+    characters = list(string.ascii_letters +
+                      string.digits + string.punctuation)
+    print("Password will include Numbers, Letters and punctuation\n")
+elif add_characters == 'y' and add_punctuation != 'y':
+    characters = list(string.ascii_letters + string.digits)
+    print("Password will include Numbers and Letters\n")
+elif add_characters != 'y' and add_punctuation == 'y':
+    characters = list(string.digits + string.punctuation)
+    print("Password will include Numbers and punctuation\n")
+else:
+    characters = list(string.digits)
+    print("Password will include Numbers only\n\0")
+
 # TODO shuffling the characters
 # TODO Generate the password
