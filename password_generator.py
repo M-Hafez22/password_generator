@@ -13,7 +13,15 @@ while True:
         print("Please enter numbers only")
         pw_lenght = input("Please enter the Password Lenght again: ")
 
-# TODO Get Password characters types (Numbers, Letters, punctuation)
+# Get Password characters types (Numbers, Letters, punctuation)
+print("\nChoose the range of characters:")
+print("to accept type y\n")
+
+add_characters = input("Do you want the password to include Letters (y/n):")
+add_punctuation = input(
+    "Do you want the password to include punctuation (y/n):")
+print("\n")
+
 # TODO Create Characters list
 # TODO shuffling the characters
 # TODO Generate the password
