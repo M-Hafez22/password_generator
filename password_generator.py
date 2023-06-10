@@ -42,4 +42,25 @@ else:
 
 # shuffling the characters list
 random.shuffle(characters)
-# TODO Generate the password
+
+# Generate the password
+
+
+def generate_random_password():
+    # picking random characters from the list
+    password = []
+    for i in range(pw_lenght):
+        password.append(random.choice(characters))
+
+    # shuffling the resultant password
+    random.shuffle(password)
+
+    # converting the list to string
+    # printing the list
+
+    print('\033[1;96m')
+    print("".join(password))
+
+
+# invoking the function
+generate_random_password()
